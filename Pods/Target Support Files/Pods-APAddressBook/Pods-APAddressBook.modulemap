@@ -1,0 +1,6 @@
+framework module APAddressBook {
+  umbrella header "Pods-APAddressBook-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FBC88B49-74DB-4D66-8DC3-EF104484BF33</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Chartis</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C29C6459FFF72175CBB9085F3A541388F0B5236A</key>
+		<string>https://github.com/franklsf95/CHARTIS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Chartis.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C29C6459FFF72175CBB9085F3A541388F0B5236A</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/franklsf95/CHARTIS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C29C6459FFF72175CBB9085F3A541388F0B5236A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C29C6459FFF72175CBB9085F3A541388F0B5236A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CHARTIS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

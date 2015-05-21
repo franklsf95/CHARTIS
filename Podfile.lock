@@ -1,0 +1,80 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking-RACExtensions (0.1.6):
+    - AFNetworking (~> 2.0)
+    - ReactiveCocoa (~> 2.0)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - APAddressBook/Core (0.1.6)
+  - APAddressBook/Swift (0.1.6):
+    - APAddressBook/Core
+  - CocoaLumberjack (2.0.0):
+    - CocoaLumberjack/Default (= 2.0.0)
+    - CocoaLumberjack/Extensions (= 2.0.0)
+  - CocoaLumberjack/Core (2.0.0)
+  - CocoaLumberjack/Default (2.0.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.0):
+    - CocoaLumberjack/Default
+  - DateTools (1.5.0)
+  - INTULocationManager (3.0.1)
+  - JGProgressHUD (1.2.6)
+  - MaterialKit (0.3.2)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - ReactiveViewModel (0.3):
+    - ReactiveCocoa (~> 2.4)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
+
+DEPENDENCIES:
+  - AFNetworking
+  - AFNetworking-RACExtensions (= 0.1.6)
+  - APAddressBook/Swift
+  - CocoaLumberjack
+  - DateTools
+  - INTULocationManager
+  - JGProgressHUD
+  - MaterialKit
+  - ReactiveCocoa
+  - ReactiveViewModel
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  AFNetworking-RACExtensions: 501ab1564f5be65e01fe3017cda7bba25764c20d
+  APAddressBook: 504c74ea416563f95fba062c0b55f859a558e54d
+  CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
+  DateTools: b93a2c2017747329c6077c7d7e8a75106e23d0d7
+  INTULocationManager: c27483113e1bbc5952ead6417f9b39824a240ebb
+  JGProgressHUD: 151e8fcfdaa9ee1fb8370837a5ac1222efd3f2d3
+  MaterialKit: dba786a24f5e5cdeb638000b899b05042dafa41c
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  ReactiveViewModel: 58918dcbcec2d3151195ab1ed9163c57a8163999
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
+
+COCOAPODS: 0.37.1

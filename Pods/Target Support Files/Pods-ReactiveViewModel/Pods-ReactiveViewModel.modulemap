@@ -1,0 +1,6 @@
+framework module ReactiveViewModel {
+  umbrella header "Pods-ReactiveViewModel-umbrella.h"
+
+  export *
+  module * { export * }
+}
