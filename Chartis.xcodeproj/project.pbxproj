@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E28DEB81B0F1639004CE151 /* Futura LT Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E28DEB71B0F1636004CE151 /* Futura LT Light.ttf */; };
+		2E493B8F1B0E8E5E00DD806B /* Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E493B8D1B0E8E5E00DD806B /* Styling.m */; };
+		2E493B981B0F04CD00DD806B /* TestItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E493B961B0F04CD00DD806B /* TestItemTableViewCell.m */; };
+		2E493B991B0F04CD00DD806B /* TestItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E493B971B0F04CD00DD806B /* TestItemTableViewCell.xib */; };
+		2E493B9E1B0F062000DD806B /* TestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E493B9D1B0F062000DD806B /* TestItem.swift */; };
 		2E89A4A01B0E6E19002A11B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A49F1B0E6E19002A11B3 /* main.m */; };
 		2E89A4A31B0E6E19002A11B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A4A21B0E6E19002A11B3 /* AppDelegate.m */; };
-		2E89A4A61B0E6E19002A11B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A4A51B0E6E19002A11B3 /* ViewController.m */; };
+		2E89A4A61B0E6E19002A11B3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A4A51B0E6E19002A11B3 /* RootViewController.m */; };
 		2E89A4A91B0E6E19002A11B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E89A4A71B0E6E19002A11B3 /* Main.storyboard */; };
 		2E89A4AB1B0E6E19002A11B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E89A4AA1B0E6E19002A11B3 /* Images.xcassets */; };
 		2E89A4AE1B0E6E19002A11B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E89A4AC1B0E6E19002A11B3 /* LaunchScreen.xib */; };
@@ -28,13 +33,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E28DEB71B0F1636004CE151 /* Futura LT Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura LT Light.ttf"; sourceTree = "<group>"; };
+		2E493B891B0E8E5E00DD806B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2E493B8C1B0E8E5E00DD806B /* Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Styling.h; sourceTree = "<group>"; };
+		2E493B8D1B0E8E5E00DD806B /* Styling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Styling.m; sourceTree = "<group>"; };
+		2E493B911B0E957C00DD806B /* Chartis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chartis-Bridging-Header.h"; sourceTree = "<group>"; };
+		2E493B951B0F04CD00DD806B /* TestItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestItemTableViewCell.h; sourceTree = "<group>"; };
+		2E493B961B0F04CD00DD806B /* TestItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestItemTableViewCell.m; sourceTree = "<group>"; };
+		2E493B971B0F04CD00DD806B /* TestItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestItemTableViewCell.xib; sourceTree = "<group>"; };
+		2E493B9D1B0F062000DD806B /* TestItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestItem.swift; sourceTree = "<group>"; };
 		2E89A49A1B0E6E19002A11B3 /* Chartis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chartis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E89A49E1B0E6E19002A11B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E89A49F1B0E6E19002A11B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E89A4A11B0E6E19002A11B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E89A4A21B0E6E19002A11B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2E89A4A41B0E6E19002A11B3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2E89A4A51B0E6E19002A11B3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2E89A4A41B0E6E19002A11B3 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		2E89A4A51B0E6E19002A11B3 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		2E89A4A81B0E6E19002A11B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E89A4AA1B0E6E19002A11B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2E89A4AD1B0E6E19002A11B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -65,6 +79,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E28DEB61B0F162A004CE151 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2E89A4A71B0E6E19002A11B3 /* Main.storyboard */,
+				2E28DEB71B0F1636004CE151 /* Futura LT Light.ttf */,
+				2E89A4AA1B0E6E19002A11B3 /* Images.xcassets */,
+				2E89A4AC1B0E6E19002A11B3 /* LaunchScreen.xib */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		2E493B901B0E955100DD806B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2E493B941B0EFF7300DD806B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				2E89A4A41B0E6E19002A11B3 /* RootViewController.h */,
+				2E89A4A51B0E6E19002A11B3 /* RootViewController.m */,
+				2E493B9D1B0F062000DD806B /* TestItem.swift */,
+				2E493B951B0F04CD00DD806B /* TestItemTableViewCell.h */,
+				2E493B961B0F04CD00DD806B /* TestItemTableViewCell.m */,
+				2E493B971B0F04CD00DD806B /* TestItemTableViewCell.xib */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
 		2E89A4911B0E6E19002A11B3 = {
 			isa = PBXGroup;
 			children = (
@@ -90,11 +135,9 @@
 			children = (
 				2E89A4A11B0E6E19002A11B3 /* AppDelegate.h */,
 				2E89A4A21B0E6E19002A11B3 /* AppDelegate.m */,
-				2E89A4A41B0E6E19002A11B3 /* ViewController.h */,
-				2E89A4A51B0E6E19002A11B3 /* ViewController.m */,
-				2E89A4A71B0E6E19002A11B3 /* Main.storyboard */,
-				2E89A4AA1B0E6E19002A11B3 /* Images.xcassets */,
-				2E89A4AC1B0E6E19002A11B3 /* LaunchScreen.xib */,
+				2E28DEB61B0F162A004CE151 /* Assets */,
+				2E493B941B0EFF7300DD806B /* Root */,
+				2E493B901B0E955100DD806B /* Models */,
 				2E89A49D1B0E6E19002A11B3 /* Supporting Files */,
 			);
 			path = Chartis;
@@ -103,6 +146,10 @@
 		2E89A49D1B0E6E19002A11B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2E493B911B0E957C00DD806B /* Chartis-Bridging-Header.h */,
+				2E493B891B0E8E5E00DD806B /* PrefixHeader.pch */,
+				2E493B8C1B0E8E5E00DD806B /* Styling.h */,
+				2E493B8D1B0E8E5E00DD806B /* Styling.m */,
 				2E89A49E1B0E6E19002A11B3 /* Info.plist */,
 				2E89A49F1B0E6E19002A11B3 /* main.m */,
 			);
@@ -226,9 +273,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E493B991B0F04CD00DD806B /* TestItemTableViewCell.xib in Resources */,
 				2E89A4A91B0E6E19002A11B3 /* Main.storyboard in Resources */,
 				2E89A4AE1B0E6E19002A11B3 /* LaunchScreen.xib in Resources */,
 				2E89A4AB1B0E6E19002A11B3 /* Images.xcassets in Resources */,
+				2E28DEB81B0F1639004CE151 /* Futura LT Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,9 +343,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E89A4A61B0E6E19002A11B3 /* ViewController.m in Sources */,
+				2E493B9E1B0F062000DD806B /* TestItem.swift in Sources */,
+				2E89A4A61B0E6E19002A11B3 /* RootViewController.m in Sources */,
 				2E89A4A31B0E6E19002A11B3 /* AppDelegate.m in Sources */,
+				2E493B981B0F04CD00DD806B /* TestItemTableViewCell.m in Sources */,
 				2E89A4A01B0E6E19002A11B3 /* main.m in Sources */,
+				2E493B8F1B0E8E5E00DD806B /* Styling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,9 +477,15 @@
 			baseConfigurationReference = EC7004245D22A2B77F3CA4EA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lean Info Works (8CK7UU4NT8)";
+				GCC_PREFIX_HEADER = Chartis/PrefixHeader.pch;
 				INFOPLIST_FILE = Chartis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chartis/Chartis-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -436,9 +494,14 @@
 			baseConfigurationReference = 8E03FD1C7873C3CE0EF937CA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lean Info Works (8CK7UU4NT8)";
+				GCC_PREFIX_HEADER = Chartis/PrefixHeader.pch;
 				INFOPLIST_FILE = Chartis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chartis/Chartis-Bridging-Header.h";
 			};
 			name = Release;
 		};
