@@ -6,9 +6,6 @@ PODS:
     - AFNetworking/Security (= 2.5.4)
     - AFNetworking/Serialization (= 2.5.4)
     - AFNetworking/UIKit (= 2.5.4)
-  - AFNetworking-RACExtensions (0.1.6):
-    - AFNetworking (~> 2.0)
-    - ReactiveCocoa (~> 2.0)
   - AFNetworking/NSURLConnection (2.5.4):
     - AFNetworking/Reachability
     - AFNetworking/Security
@@ -23,9 +20,8 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - ALAlertBanner (0.3.1)
-  - APAddressBook/Core (0.1.6)
-  - APAddressBook/Swift (0.1.6):
+  - APAddressBook/Core (0.1.7)
+  - APAddressBook/Swift (0.1.7):
     - APAddressBook/Core
   - CocoaLumberjack (2.0.0):
     - CocoaLumberjack/Default (= 2.0.0)
@@ -36,49 +32,61 @@ PODS:
   - CocoaLumberjack/Extensions (2.0.0):
     - CocoaLumberjack/Default
   - INTULocationManager (3.0.1)
-  - JGProgressHUD (1.2.6)
-  - MaterialKit (0.3.2)
-  - ReactiveCocoa (2.5):
-    - ReactiveCocoa/UI (= 2.5)
-  - ReactiveCocoa/Core (2.5):
-    - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.5)
-  - ReactiveCocoa/UI (2.5):
-    - ReactiveCocoa/Core
-  - ReactiveViewModel (0.3):
-    - ReactiveCocoa (~> 2.4)
+  - JGProgressHUD (1.2.7)
+  - MaterialKit (0.3.5)
+  - OMGHTTPURLRQ (2.1):
+    - OMGHTTPURLRQ/RQ (= 2.1)
+  - OMGHTTPURLRQ/FormURLEncode (2.1)
+  - OMGHTTPURLRQ/RQ (2.1):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (2.1)
+  - PromiseKit (2.0.1):
+    - PromiseKit/Foundation (= 2.0.1)
+    - PromiseKit/QuartzCore (= 2.0.1)
+    - PromiseKit/UIKit (= 2.0.1)
+  - PromiseKit/CorePromise (2.0.1)
+  - PromiseKit/Foundation (2.0.1):
+    - OMGHTTPURLRQ
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (2.0.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (2.0.1):
+    - PromiseKit/CorePromise
   - SDWebImage (3.7.2):
     - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
 
 DEPENDENCIES:
   - AFNetworking
-  - AFNetworking-RACExtensions (= 0.1.6)
-  - ALAlertBanner (from `Pods/ALAlertBanner`)
   - APAddressBook/Swift
-  - CocoaLumberjack
+  - CocoaLumberjack (from `https://github.com/CocoaLumberjack/CocoaLumberjack`, branch
+    `swift_support`)
   - INTULocationManager
   - JGProgressHUD
   - MaterialKit
-  - ReactiveCocoa
-  - ReactiveViewModel
+  - PromiseKit
   - SDWebImage
 
 EXTERNAL SOURCES:
-  ALAlertBanner:
-    :path: Pods/ALAlertBanner
+  CocoaLumberjack:
+    :branch: swift_support
+    :git: https://github.com/CocoaLumberjack/CocoaLumberjack
+
+CHECKOUT OPTIONS:
+  CocoaLumberjack:
+    :commit: 767e1c457f2477605ab4f345336d7b5b3785ce0e
+    :git: https://github.com/CocoaLumberjack/CocoaLumberjack
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  AFNetworking-RACExtensions: 501ab1564f5be65e01fe3017cda7bba25764c20d
-  ALAlertBanner: 08d82be509cd9b70c4ac0ee1e7ac250003a8b34b
-  APAddressBook: 504c74ea416563f95fba062c0b55f859a558e54d
-  CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
+  APAddressBook: 6d9142c95f8306fdc229b62171251283777e750c
+  CocoaLumberjack: 881d9b60cb7d1f647305863086a23bcd835d961a
   INTULocationManager: c27483113e1bbc5952ead6417f9b39824a240ebb
-  JGProgressHUD: 151e8fcfdaa9ee1fb8370837a5ac1222efd3f2d3
-  MaterialKit: dba786a24f5e5cdeb638000b899b05042dafa41c
-  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  ReactiveViewModel: 58918dcbcec2d3151195ab1ed9163c57a8163999
+  JGProgressHUD: a45c1d16adddf7e38092ce3f0d71d3955d2de2ec
+  MaterialKit: 6f1e9382f89593df768bc0c31ded9952a6d8ad46
+  OMGHTTPURLRQ: f8c515dfd2f57a5d74c710978f600231f52afec5
+  PromiseKit: 99e70653af4599292678d92dc3bcf82b2872a578
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
 COCOAPODS: 0.37.1

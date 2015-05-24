@@ -4,17 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-AFNetworking-RACExtensions.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-ALAlertBanner.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -44,12 +34,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ReactiveCocoa.xcscheme</key>
+		<key>Pods-OMGHTTPURLRQ.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ReactiveViewModel.xcscheme</key>
+		<key>Pods-PromiseKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -67,62 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>25E468825601CFF87FB59D74</key>
+		<key>19409B40D386E1A0D76745B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>26BFCAA85E0D3872049EF48B</key>
+		<key>3AA857CC04A0A47EFFBF2FB0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2ADC1D55A26639EA5E575CD8</key>
+		<key>59457950F8601A6638AA1B77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>582ED144C6F7B6EBDE48F092</key>
+		<key>5E1A499E345CFB761F488DBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>60D920AFE7DCBFD7E498828A</key>
+		<key>6500D8B7CE3CBE5E93A78DA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8ABAF62E07977295B6D1661A</key>
+		<key>8A98BEDDDDDB7588CBD1FB51</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>905123A1D4E7F119CB4BAA56</key>
+		<key>9DCFE765562FD168BDFC326E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>99D4554F2451B75E53ADAEE6</key>
+		<key>F0DC33E2ADB3CB8A74DA26DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEB73CA6A922AE89E30EBA85</key>
+		<key>F9407B142AF66749A330BF0A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B1E35F37DEC09E15C250F02F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E478D1FF76DD2C33723F0C5B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E64BE5C1FABFC757F9479A50</key>
+		<key>FB001C13150B40E3E6696D9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

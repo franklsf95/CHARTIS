@@ -21,9 +21,11 @@ public class MKTextField : UITextField {
         }
     }
 
-    @IBInspectable public var aniDuration: Float = 0.65
-    @IBInspectable public var rippleAniTimingFunction: MKTimingFunction = .Linear
+    @IBInspectable public var rippleAniDuration: Float = 0.75
+    @IBInspectable public var backgroundAniDuration: Float = 1.0
     @IBInspectable public var shadowAniEnabled: Bool = true
+    @IBInspectable public var rippleAniTimingFunction: MKTimingFunction = .Linear
+    
     @IBInspectable public var cornerRadius: CGFloat = 2.5 {
         didSet {
             layer.cornerRadius = cornerRadius
@@ -72,9 +74,7 @@ public class MKTextField : UITextField {
 
     override public var placeholder: String? {
         didSet {
-            floatingLabel.text = placeholder
-            floatingLabel.sizeToFit()
-            setFloatingLabelOverlapTextField()
+            updateFloatingLabelText()
         }
     }
     override public var bounds: CGRect {
@@ -109,14 +109,16 @@ public class MKTextField : UITextField {
         floatingLabel = UILabel()
         floatingLabel.font = floatingLabelFont
         floatingLabel.alpha = 0.0
+        updateFloatingLabelText()
+        
         addSubview(floatingLabel)
     }
 
     override public func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent) -> Bool {
         mkLayer.didChangeTapLocation(touch.locationInView(self))
 
-        mkLayer.animateScaleForCircleLayer(0.45, toScale: 1.0, timingFunction: MKTimingFunction.Linear, duration: 0.75)
-        mkLayer.animateAlphaForBackgroundLayer(MKTimingFunction.Linear, duration: 0.75)
+        mkLayer.animateScaleForCircleLayer(0.45, toScale: 1.0, timingFunction: MKTimingFunction.Linear, duration: CFTimeInterval(self.rippleAniDuration))
+        mkLayer.animateAlphaForBackgroundLayer(MKTimingFunction.Linear, duration: CFTimeInterval(self.backgroundAniDuration))
 
         return super.beginTrackingWithTouch(touch, withEvent: event)
     }
@@ -161,8 +163,10 @@ public class MKTextField : UITextField {
     override public func editingRectForBounds(bounds: CGRect) -> CGRect {
         return textRectForBounds(bounds)
     }
+}
 
-    // MARK - private
+// MARK - private methods
+private extension MKTextField {
     private func setFloatingLabelOverlapTextField() {
         let textRect = textRectForBounds(bounds)
         var originX = textRect.origin.x
@@ -181,13 +185,20 @@ public class MKTextField : UITextField {
     private func showFloatingLabel() {
         let curFrame = floatingLabel.frame
         floatingLabel.frame = CGRect(x: curFrame.origin.x, y: bounds.height/2, width: curFrame.width, height: curFrame.height)
-        UIView.animateWithDuration(0.45, delay: 0.0, options: .CurveEaseOut, animations: {
-            self.floatingLabel.alpha = 1.0
-            self.floatingLabel.frame = curFrame
+        UIView.animateWithDuration(0.45, delay: 0.0, options: .CurveEaseOut,
+            animations: {
+                self.floatingLabel.alpha = 1.0
+                self.floatingLabel.frame = curFrame
             }, completion: nil)
     }
 
     private func hideFloatingLabel() {
         floatingLabel.alpha = 0.0
+    }
+    
+    private func updateFloatingLabelText() {
+        floatingLabel.text = placeholder
+        floatingLabel.sizeToFit()
+        setFloatingLabelOverlapTextField()
     }
 }

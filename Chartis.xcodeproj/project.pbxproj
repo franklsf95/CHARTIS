@@ -12,6 +12,8 @@
 		2E493B981B0F04CD00DD806B /* TestItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E493B961B0F04CD00DD806B /* TestItemTableViewCell.m */; };
 		2E493B991B0F04CD00DD806B /* TestItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E493B971B0F04CD00DD806B /* TestItemTableViewCell.xib */; };
 		2E493B9E1B0F062000DD806B /* TestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E493B9D1B0F062000DD806B /* TestItem.swift */; };
+		2E4A80C21B128F1900BC8378 /* TestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A80C11B128F1900BC8378 /* TestManager.swift */; };
+		2E4A80C41B1292AD00BC8378 /* CHHTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A80C31B1292AD00BC8378 /* CHHTTPRequestSerializer.swift */; };
 		2E89A4A01B0E6E19002A11B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A49F1B0E6E19002A11B3 /* main.m */; };
 		2E89A4A31B0E6E19002A11B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A4A21B0E6E19002A11B3 /* AppDelegate.m */; };
 		2E89A4A61B0E6E19002A11B3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A4A51B0E6E19002A11B3 /* RootViewController.m */; };
@@ -42,6 +44,9 @@
 		2E493B961B0F04CD00DD806B /* TestItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestItemTableViewCell.m; sourceTree = "<group>"; };
 		2E493B971B0F04CD00DD806B /* TestItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestItemTableViewCell.xib; sourceTree = "<group>"; };
 		2E493B9D1B0F062000DD806B /* TestItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestItem.swift; sourceTree = "<group>"; };
+		2E4A80C01B1285FC00BC8378 /* Models.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Models.h; sourceTree = "<group>"; };
+		2E4A80C11B128F1900BC8378 /* TestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestManager.swift; sourceTree = "<group>"; };
+		2E4A80C31B1292AD00BC8378 /* CHHTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHHTTPRequestSerializer.swift; sourceTree = "<group>"; };
 		2E89A49A1B0E6E19002A11B3 /* Chartis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chartis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E89A49E1B0E6E19002A11B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E89A49F1B0E6E19002A11B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,18 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				2E89A4A71B0E6E19002A11B3 /* Main.storyboard */,
-				2E28DEB71B0F1636004CE151 /* Futura LT Light.ttf */,
 				2E89A4AA1B0E6E19002A11B3 /* Images.xcassets */,
 				2E89A4AC1B0E6E19002A11B3 /* LaunchScreen.xib */,
+				2E28DEB71B0F1636004CE151 /* Futura LT Light.ttf */,
 			);
 			name = Assets;
-			sourceTree = "<group>";
-		};
-		2E493B901B0E955100DD806B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		2E493B941B0EFF7300DD806B /* Root */ = {
@@ -102,12 +100,22 @@
 			children = (
 				2E89A4A41B0E6E19002A11B3 /* RootViewController.h */,
 				2E89A4A51B0E6E19002A11B3 /* RootViewController.m */,
-				2E493B9D1B0F062000DD806B /* TestItem.swift */,
 				2E493B951B0F04CD00DD806B /* TestItemTableViewCell.h */,
 				2E493B961B0F04CD00DD806B /* TestItemTableViewCell.m */,
 				2E493B971B0F04CD00DD806B /* TestItemTableViewCell.xib */,
 			);
 			name = Root;
+			sourceTree = "<group>";
+		};
+		2E7739B31B0FDB7300B22150 /* TestEngine */ = {
+			isa = PBXGroup;
+			children = (
+				2E4A80C31B1292AD00BC8378 /* CHHTTPRequestSerializer.swift */,
+				2E4A80C01B1285FC00BC8378 /* Models.h */,
+				2E4A80C11B128F1900BC8378 /* TestManager.swift */,
+				2E493B9D1B0F062000DD806B /* TestItem.swift */,
+			);
+			name = TestEngine;
 			sourceTree = "<group>";
 		};
 		2E89A4911B0E6E19002A11B3 = {
@@ -136,8 +144,8 @@
 				2E89A4A11B0E6E19002A11B3 /* AppDelegate.h */,
 				2E89A4A21B0E6E19002A11B3 /* AppDelegate.m */,
 				2E28DEB61B0F162A004CE151 /* Assets */,
+				2E7739B31B0FDB7300B22150 /* TestEngine */,
 				2E493B941B0EFF7300DD806B /* Root */,
-				2E493B901B0E955100DD806B /* Models */,
 				2E89A49D1B0E6E19002A11B3 /* Supporting Files */,
 			);
 			path = Chartis;
@@ -343,11 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E4A80C21B128F1900BC8378 /* TestManager.swift in Sources */,
 				2E493B9E1B0F062000DD806B /* TestItem.swift in Sources */,
 				2E89A4A61B0E6E19002A11B3 /* RootViewController.m in Sources */,
 				2E89A4A31B0E6E19002A11B3 /* AppDelegate.m in Sources */,
 				2E493B981B0F04CD00DD806B /* TestItemTableViewCell.m in Sources */,
 				2E89A4A01B0E6E19002A11B3 /* main.m in Sources */,
+				2E4A80C41B1292AD00BC8378 /* CHHTTPRequestSerializer.swift in Sources */,
 				2E493B8F1B0E8E5E00DD806B /* Styling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

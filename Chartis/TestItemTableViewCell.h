@@ -10,7 +10,7 @@
 
 @class RootViewController;
 
-@interface TestItemTableViewCell : UITableViewCell
+@interface TestItemTableViewCell : UITableViewCell <TestItemDisplayDelegate>
 
 @property (nonatomic, weak) RootViewController *delegate;
 @property (nonatomic, strong) TestItem *testItem;

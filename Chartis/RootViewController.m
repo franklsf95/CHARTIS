@@ -15,15 +15,17 @@ enum {
 
 static NSString * const CellTestItem = @"CellTestItem";
 
-@interface RootViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 @property (nonatomic, strong) CAGradientLayer *gradientLayer;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewBottomConstraint;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet MKButton *startButton;
+@property (weak, nonatomic) IBOutlet UITextField *serverAddressTextField;
 
 @property (nonatomic, copy) NSArray *testItems;
 
@@ -47,6 +49,17 @@ static NSString * const CellTestItem = @"CellTestItem";
     self.startButton.backgroundColor = [UIColor chartisOrange];
     self.startButton.backgroundLayerColor = [UIColor chartisOrange];
     
+    // Setup UI - footer
+    
+    self.serverAddressTextField.layer.borderColor = [UIColor clearColor].CGColor;
+    self.serverAddressTextField.delegate = self;
+    self.serverAddressTextField.text = [[[TestManager sharedInstance] baseURL] absoluteString];
+    
+    // Tune in notifications
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardWillChange:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardWillChange:) name:UIKeyboardWillHideNotification object:nil];
+    
     // Setup table view
     
     self.tableView.delegate = self;
@@ -57,18 +70,20 @@ static NSString * const CellTestItem = @"CellTestItem";
     
     // Initialize test items
     
-    self.testItems = @[[[TestItem alloc] initWithKey:@"feed.10" displayName:@"News Feed Loading (10 items)"],
-                       [[TestItem alloc] initWithKey:@"sketch.1" displayName:@"Sketch Detail Loading"]
-                       ];
+    self.testItems = [[TestManager sharedInstance] testGroup1];
 }
 
-- (BOOL)prefersStatusBarHidden {
-    return YES;
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     self.gradientLayer.frame = self.view.bounds;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Table View styling
@@ -103,7 +118,29 @@ static NSString * const CellTestItem = @"CellTestItem";
 #pragma mark - Table View headers
 
 
+#pragma mark - Text Field delegate
 
+- (void)handleKeyboardWillChange:(NSNotification *)notification {
+    DDLogVerbose(@"%@ handles notification %@", NSStringFromClass([self class]), notification.name);
+    NSNumber *curveNumber = notification.userInfo[UIKeyboardAnimationCurveUserInfoKey];
+    NSNumber *durationNumber = notification.userInfo[UIKeyboardAnimationDurationUserInfoKey];
+    
+    CGFloat height = 0;
+    if ([notification.name isEqualToString:UIKeyboardWillShowNotification]) {
+        NSValue *endFrameValue = notification.userInfo[UIKeyboardFrameEndUserInfoKey];
+        height = CGRectGetHeight([endFrameValue CGRectValue]);
+    }
+    
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:[durationNumber doubleValue] delay:0 options:animationOptionsWithCurve([curveNumber integerValue]) animations:^{
+        self.contentViewBottomConstraint.constant = height;
+        [self.view layoutIfNeeded];
+    } completion:NULL];
+}
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
 
 @end

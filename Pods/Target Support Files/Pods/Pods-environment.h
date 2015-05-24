@@ -12,12 +12,6 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking 4
 
-// AFNetworking-RACExtensions
-#define COCOAPODS_POD_AVAILABLE_AFNetworking_RACExtensions
-#define COCOAPODS_VERSION_MAJOR_AFNetworking_RACExtensions 0
-#define COCOAPODS_VERSION_MINOR_AFNetworking_RACExtensions 1
-#define COCOAPODS_VERSION_PATCH_AFNetworking_RACExtensions 6
-
 // AFNetworking/NSURLConnection
 #define COCOAPODS_POD_AVAILABLE_AFNetworking_NSURLConnection
 #define COCOAPODS_VERSION_MAJOR_AFNetworking_NSURLConnection 2
@@ -54,23 +48,17 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 4
 
-// ALAlertBanner
-#define COCOAPODS_POD_AVAILABLE_ALAlertBanner
-#define COCOAPODS_VERSION_MAJOR_ALAlertBanner 0
-#define COCOAPODS_VERSION_MINOR_ALAlertBanner 3
-#define COCOAPODS_VERSION_PATCH_ALAlertBanner 1
-
 // APAddressBook/Core
 #define COCOAPODS_POD_AVAILABLE_APAddressBook_Core
 #define COCOAPODS_VERSION_MAJOR_APAddressBook_Core 0
 #define COCOAPODS_VERSION_MINOR_APAddressBook_Core 1
-#define COCOAPODS_VERSION_PATCH_APAddressBook_Core 6
+#define COCOAPODS_VERSION_PATCH_APAddressBook_Core 7
 
 // APAddressBook/Swift
 #define COCOAPODS_POD_AVAILABLE_APAddressBook_Swift
 #define COCOAPODS_VERSION_MAJOR_APAddressBook_Swift 0
 #define COCOAPODS_VERSION_MINOR_APAddressBook_Swift 1
-#define COCOAPODS_VERSION_PATCH_APAddressBook_Swift 6
+#define COCOAPODS_VERSION_PATCH_APAddressBook_Swift 7
 
 // CocoaLumberjack
 #define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
@@ -106,43 +94,67 @@
 #define COCOAPODS_POD_AVAILABLE_JGProgressHUD
 #define COCOAPODS_VERSION_MAJOR_JGProgressHUD 1
 #define COCOAPODS_VERSION_MINOR_JGProgressHUD 2
-#define COCOAPODS_VERSION_PATCH_JGProgressHUD 6
+#define COCOAPODS_VERSION_PATCH_JGProgressHUD 7
 
 // MaterialKit
 #define COCOAPODS_POD_AVAILABLE_MaterialKit
 #define COCOAPODS_VERSION_MAJOR_MaterialKit 0
 #define COCOAPODS_VERSION_MINOR_MaterialKit 3
-#define COCOAPODS_VERSION_PATCH_MaterialKit 2
+#define COCOAPODS_VERSION_PATCH_MaterialKit 5
 
-// ReactiveCocoa
-#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
-#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 2
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa 5
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa 0
+// OMGHTTPURLRQ
+#define COCOAPODS_POD_AVAILABLE_OMGHTTPURLRQ
+#define COCOAPODS_VERSION_MAJOR_OMGHTTPURLRQ 2
+#define COCOAPODS_VERSION_MINOR_OMGHTTPURLRQ 1
+#define COCOAPODS_VERSION_PATCH_OMGHTTPURLRQ 0
 
-// ReactiveCocoa/Core
-#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_Core
-#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_Core 2
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_Core 5
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_Core 0
+// OMGHTTPURLRQ/FormURLEncode
+#define COCOAPODS_POD_AVAILABLE_OMGHTTPURLRQ_FormURLEncode
+#define COCOAPODS_VERSION_MAJOR_OMGHTTPURLRQ_FormURLEncode 2
+#define COCOAPODS_VERSION_MINOR_OMGHTTPURLRQ_FormURLEncode 1
+#define COCOAPODS_VERSION_PATCH_OMGHTTPURLRQ_FormURLEncode 0
 
-// ReactiveCocoa/UI
-#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_UI
-#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_UI 2
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_UI 5
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_UI 0
+// OMGHTTPURLRQ/RQ
+#define COCOAPODS_POD_AVAILABLE_OMGHTTPURLRQ_RQ
+#define COCOAPODS_VERSION_MAJOR_OMGHTTPURLRQ_RQ 2
+#define COCOAPODS_VERSION_MINOR_OMGHTTPURLRQ_RQ 1
+#define COCOAPODS_VERSION_PATCH_OMGHTTPURLRQ_RQ 0
 
-// ReactiveCocoa/no-arc
-#define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_no_arc
-#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_no_arc 2
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_no_arc 5
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_no_arc 0
+// OMGHTTPURLRQ/UserAgent
+#define COCOAPODS_POD_AVAILABLE_OMGHTTPURLRQ_UserAgent
+#define COCOAPODS_VERSION_MAJOR_OMGHTTPURLRQ_UserAgent 2
+#define COCOAPODS_VERSION_MINOR_OMGHTTPURLRQ_UserAgent 1
+#define COCOAPODS_VERSION_PATCH_OMGHTTPURLRQ_UserAgent 0
 
-// ReactiveViewModel
-#define COCOAPODS_POD_AVAILABLE_ReactiveViewModel
-#define COCOAPODS_VERSION_MAJOR_ReactiveViewModel 0
-#define COCOAPODS_VERSION_MINOR_ReactiveViewModel 3
-#define COCOAPODS_VERSION_PATCH_ReactiveViewModel 0
+// PromiseKit
+#define COCOAPODS_POD_AVAILABLE_PromiseKit
+#define COCOAPODS_VERSION_MAJOR_PromiseKit 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit 0
+#define COCOAPODS_VERSION_PATCH_PromiseKit 1
+
+// PromiseKit/CorePromise
+#define COCOAPODS_POD_AVAILABLE_PromiseKit_CorePromise
+#define COCOAPODS_VERSION_MAJOR_PromiseKit_CorePromise 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_CorePromise 0
+#define COCOAPODS_VERSION_PATCH_PromiseKit_CorePromise 1
+
+// PromiseKit/Foundation
+#define COCOAPODS_POD_AVAILABLE_PromiseKit_Foundation
+#define COCOAPODS_VERSION_MAJOR_PromiseKit_Foundation 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_Foundation 0
+#define COCOAPODS_VERSION_PATCH_PromiseKit_Foundation 1
+
+// PromiseKit/QuartzCore
+#define COCOAPODS_POD_AVAILABLE_PromiseKit_QuartzCore
+#define COCOAPODS_VERSION_MAJOR_PromiseKit_QuartzCore 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_QuartzCore 0
+#define COCOAPODS_VERSION_PATCH_PromiseKit_QuartzCore 1
+
+// PromiseKit/UIKit
+#define COCOAPODS_POD_AVAILABLE_PromiseKit_UIKit
+#define COCOAPODS_VERSION_MAJOR_PromiseKit_UIKit 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_UIKit 0
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIKit 1
 
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage

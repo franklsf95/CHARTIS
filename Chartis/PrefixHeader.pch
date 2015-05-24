@@ -11,6 +11,11 @@
 
 #import "MaterialKit-Swift.h"
 #import "Chartis-Swift.h"
+#import <AFNetworking/AFNetworking.h>
+#define DD_LEGACY_MACROS 0
+#import "CocoaLumberjack.h"
+
 #import "Styling.h"
+#import "Models.h"
 
 #endif

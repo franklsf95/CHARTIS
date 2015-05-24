@@ -8,19 +8,39 @@
 
 import UIKit
 
+/// A TestItem encapsulates all parameters required to test on a single API endpoint
 class TestItem: NSObject {
     
-    dynamic var key = ""
-    dynamic var displayName = ""
-    dynamic var resultTime: NSTimeInterval = 0
+    var key = ""
+    var displayName = ""
+    
+    var method = "GET"
+    var endpoint = ""
+    var parameters: NSDictionary?
+    
+    var running = false
+    var resultTime: NSTimeInterval = -1
+    
+    weak var delegate: TestItemDisplayDelegate?
+    
+    // MARK: - Methods
     
     override var description: String {
-        return "TestItem{\(key)}"
+        return "<TestItem: \(key)>"
     }
     
-    init(key: String, displayName: String) {
+    init(key: String, displayName: String, method: String = "GET", endpoint: String, parameters: NSDictionary? = nil) {
         self.key = key
         self.displayName = displayName
+        self.method = method
+        self.endpoint = endpoint
+        self.parameters = parameters
+    }
+    
+    // MARK: - Delegate Methods
+    
+    func setNeedsDisplay() {
+        delegate?.updateDisplay()
     }
    
 }

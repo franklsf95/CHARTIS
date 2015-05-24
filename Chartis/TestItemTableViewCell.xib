@@ -34,12 +34,23 @@
                         <state key="normal" title="Test">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="testButtonTouched:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hPC-Zy-d2j"/>
+                        </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii0-Yo-v8v" userLabel="Result Label">
+                        <rect key="frame" x="255" y="19" width="7" height="21"/>
+                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="ibW-sJ-VYO" secondAttribute="trailing" id="AMY-oj-wxQ"/>
                     <constraint firstAttribute="centerY" secondItem="ibW-sJ-VYO" secondAttribute="centerY" id="LuA-mU-H07"/>
+                    <constraint firstAttribute="centerY" secondItem="ii0-Yo-v8v" secondAttribute="centerY" id="OJX-Hn-gjQ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ii0-Yo-v8v" secondAttribute="trailing" constant="50" id="Wsc-tC-1Gp"/>
                     <constraint firstItem="cCV-AJ-5JG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="YLf-rf-FEP"/>
                     <constraint firstAttribute="centerY" secondItem="cCV-AJ-5JG" secondAttribute="centerY" id="loQ-QN-r3q"/>
                 </constraints>
@@ -48,6 +59,7 @@
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="displayNameLabel" destination="cCV-AJ-5JG" id="PIt-gs-pXa"/>
+                <outlet property="resultLabel" destination="ii0-Yo-v8v" id="zlY-sd-ikw"/>
                 <outlet property="testButton" destination="ibW-sJ-VYO" id="XQw-ea-cJg"/>
             </connections>
         </tableViewCell>

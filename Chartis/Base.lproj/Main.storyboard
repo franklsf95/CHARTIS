@@ -72,17 +72,23 @@
                                                 <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="deviceRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://api.sketch-off.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T0E-eb-HkO" customClass="MKTextField" customModule="MaterialKit">
-                                                <rect key="frame" x="8" y="35" width="167" height="18"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://example.com" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T0E-eb-HkO" customClass="MKTextField" customModule="MaterialKit">
+                                                <rect key="frame" x="8" y="35" width="359" height="19"/>
                                                 <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="deviceRGB"/>
                                                 <fontDescription key="fontDescription" name="FuturaLT-Light" family="Futura LT Light" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
+                                                        <color key="value" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="deviceRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="T0E-eb-HkO" firstAttribute="top" secondItem="bKd-dC-dtu" secondAttribute="bottom" constant="8" id="8ua-ni-Rcq"/>
                                             <constraint firstItem="bKd-dC-dtu" firstAttribute="top" secondItem="e9C-tB-Hmb" secondAttribute="top" constant="8" id="9AO-rb-wXS"/>
                                             <constraint firstItem="bKd-dC-dtu" firstAttribute="leading" secondItem="e9C-tB-Hmb" secondAttribute="leading" constant="13" id="C1Z-uc-GkF"/>
+                                            <constraint firstAttribute="trailing" secondItem="T0E-eb-HkO" secondAttribute="trailing" constant="8" id="Rgg-p0-JGq"/>
                                             <constraint firstItem="T0E-eb-HkO" firstAttribute="leading" secondItem="e9C-tB-Hmb" secondAttribute="leading" constant="8" id="Zp2-YP-cRK"/>
                                             <constraint firstAttribute="height" constant="80" id="edo-0s-e0Y"/>
                                         </constraints>
@@ -120,7 +126,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="contentView" destination="KQC-n3-WuQ" id="Q57-8q-qKE"/>
+                        <outlet property="contentViewBottomConstraint" destination="22Q-Bg-GmI" id="u8Z-Ph-9eq"/>
                         <outlet property="descriptionLabel" destination="iPI-a1-Gmb" id="vLd-kH-KNe"/>
+                        <outlet property="serverAddressTextField" destination="T0E-eb-HkO" id="VBo-Vt-jkh"/>
                         <outlet property="startButton" destination="yF9-sP-Js2" id="u1B-xy-jHq"/>
                         <outlet property="tableView" destination="6pp-iZ-Cg6" id="Brl-6Q-RzJ"/>
                         <outlet property="titleLabel" destination="4sC-ID-Jo1" id="Uf1-4c-5GW"/>
