@@ -14,7 +14,7 @@ class CHHTTPRequestSerializer: AFHTTPRequestSerializer {
     override func requestWithMethod(method: String!, URLString: String!, parameters: AnyObject!, error: NSErrorPointer) -> NSMutableURLRequest! {
         let mutableRequest = super.requestWithMethod(method, URLString: URLString, parameters: parameters, error: error)
         mutableRequest.timeoutInterval = 10 as NSTimeInterval
-        mutableRequest.cachePolicy = .ReloadIgnoringLocalCacheData
+        mutableRequest.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData
         return mutableRequest
     }
     

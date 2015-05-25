@@ -3,11 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="Futura LT Light.ttf">
-            <string>FuturaLT-Light</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -54,43 +49,46 @@
                                                 <color key="value" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3a7-6S-8zq"/>
+                                        </connections>
                                     </button>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Euz-J5-WcV">
                                         <rect key="frame" x="238" y="132" width="20" height="20"/>
                                     </activityIndicatorView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6pp-iZ-Cg6">
-                                        <rect key="frame" x="0.0" y="180" width="375" height="407"/>
+                                        <rect key="frame" x="0.0" y="180" width="375" height="427"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9C-tB-Hmb" userLabel="Footer View">
-                                        <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configure Server" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKd-dC-dtu">
-                                                <rect key="frame" x="13" y="8" width="109" height="19"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                                <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="deviceRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://example.com" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T0E-eb-HkO" customClass="MKTextField" customModule="MaterialKit">
-                                                <rect key="frame" x="8" y="35" width="359" height="19"/>
-                                                <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="deviceRGB"/>
-                                                <fontDescription key="fontDescription" name="FuturaLT-Light" family="Futura LT Light" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSP-9b-cLs" customClass="MKButton" customModule="MaterialKit">
+                                                <rect key="frame" x="77" y="12" width="220" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="220" id="NFD-lc-Uav"/>
+                                                    <constraint firstAttribute="height" constant="36" id="PF8-Pt-xp1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                <state key="normal" title="SEND REPORT"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
-                                                        <color key="value" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="deviceRGB"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="18"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleLayerColor">
+                                                        <color key="value" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                            </textField>
+                                                <connections>
+                                                    <action selector="sendButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rSE-6b-vrd"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="T0E-eb-HkO" firstAttribute="top" secondItem="bKd-dC-dtu" secondAttribute="bottom" constant="8" id="8ua-ni-Rcq"/>
-                                            <constraint firstItem="bKd-dC-dtu" firstAttribute="top" secondItem="e9C-tB-Hmb" secondAttribute="top" constant="8" id="9AO-rb-wXS"/>
-                                            <constraint firstItem="bKd-dC-dtu" firstAttribute="leading" secondItem="e9C-tB-Hmb" secondAttribute="leading" constant="13" id="C1Z-uc-GkF"/>
-                                            <constraint firstAttribute="trailing" secondItem="T0E-eb-HkO" secondAttribute="trailing" constant="8" id="Rgg-p0-JGq"/>
-                                            <constraint firstItem="T0E-eb-HkO" firstAttribute="leading" secondItem="e9C-tB-Hmb" secondAttribute="leading" constant="8" id="Zp2-YP-cRK"/>
-                                            <constraint firstAttribute="height" constant="80" id="edo-0s-e0Y"/>
+                                            <constraint firstAttribute="centerX" secondItem="hSP-9b-cLs" secondAttribute="centerX" id="Kv6-iE-pVR"/>
+                                            <constraint firstAttribute="height" constant="60" id="edo-0s-e0Y"/>
+                                            <constraint firstAttribute="centerY" secondItem="hSP-9b-cLs" secondAttribute="centerY" id="uve-hX-kn4"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -128,9 +126,10 @@
                         <outlet property="contentView" destination="KQC-n3-WuQ" id="Q57-8q-qKE"/>
                         <outlet property="contentViewBottomConstraint" destination="22Q-Bg-GmI" id="u8Z-Ph-9eq"/>
                         <outlet property="descriptionLabel" destination="iPI-a1-Gmb" id="vLd-kH-KNe"/>
-                        <outlet property="serverAddressTextField" destination="T0E-eb-HkO" id="VBo-Vt-jkh"/>
+                        <outlet property="sendButton" destination="hSP-9b-cLs" id="ig5-3W-So7"/>
                         <outlet property="startButton" destination="yF9-sP-Js2" id="u1B-xy-jHq"/>
                         <outlet property="tableView" destination="6pp-iZ-Cg6" id="Brl-6Q-RzJ"/>
+                        <outlet property="testingIndicator" destination="Euz-J5-WcV" id="Zbz-U8-FB9"/>
                         <outlet property="titleLabel" destination="4sC-ID-Jo1" id="Uf1-4c-5GW"/>
                     </connections>
                 </viewController>

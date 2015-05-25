@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "TestItemTableViewCell.h"
+#import <MessageUI/MessageUI.h>
 
 enum {
     SectionAPITesting = 0
@@ -25,7 +26,8 @@ static NSString * const CellTestItem = @"CellTestItem";
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet MKButton *startButton;
-@property (weak, nonatomic) IBOutlet UITextField *serverAddressTextField;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *testingIndicator;
+@property (weak, nonatomic) IBOutlet MKButton *sendButton;
 
 @property (nonatomic, copy) NSArray *testItems;
 
@@ -51,9 +53,8 @@ static NSString * const CellTestItem = @"CellTestItem";
     
     // Setup UI - footer
     
-    self.serverAddressTextField.layer.borderColor = [UIColor clearColor].CGColor;
-    self.serverAddressTextField.delegate = self;
-    self.serverAddressTextField.text = [[[TestManager sharedInstance] baseURL] absoluteString];
+    NSAttributedString *aStr = [[NSAttributedString alloc] initWithString:@"SEND REPORT" attributes:@{NSKernAttributeName: @1, NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    [self.sendButton setAttributedTitle:aStr forState:UIControlStateNormal];
     
     // Tune in notifications
     
@@ -70,7 +71,7 @@ static NSString * const CellTestItem = @"CellTestItem";
     
     // Initialize test items
     
-    self.testItems = [[TestManager sharedInstance] testGroup1];
+    self.testItems = [[TestManager sharedInstance] testItems];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -141,6 +142,38 @@ static NSString * const CellTestItem = @"CellTestItem";
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return NO;
+}
+
+#pragma mark - Action buttons
+
+- (IBAction)startButtonTouched:(UIButton *)sender {
+    [self.testingIndicator startAnimating];
+    [[TestManager sharedInstance] runAllTests:^{
+        [self.testingIndicator stopAnimating];
+    }];
+}
+
+#pragma mark - Email submission
+
+- (IBAction)sendButtonTouched:(UIButton *)sender {
+    MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+    [mail setSubject:[self emailTitle]];
+    [mail setMessageBody:@"Hi!" isHTML:NO];
+    [mail setToRecipients:@[@"frank@sketchme.co"]];
+    [mail addAttachmentData:[[TestManager sharedInstance] CSVData] mimeType:@"text/csv" fileName:[self attachmentFileName]];
+    [self presentViewController:mail animated:YES completion:NULL];
+}
+
+- (NSString *)currentDate {
+    return @"Now";
+}
+
+- (NSString *)emailTitle {
+    return @"SketchMe Benchmarking Result";
+}
+
+- (NSString *)attachmentFileName {
+    return @"A.csv";
 }
 
 @end

@@ -31,15 +31,19 @@
 }
 
 - (IBAction)testButtonTouched:(UIButton *)sender {
-    [[TestManager sharedInstance] runTest:self.testItem];
+    [[TestManager sharedInstance] runTest:self.testItem completion:NULL];
 }
 
 - (void)updateDisplay {
     self.displayNameLabel.text = self.testItem.displayName;
-    if (self.testItem.resultTime >= 0) {
-        self.resultLabel.text = [NSString stringWithFormat:@"%.0lfms", self.testItem.resultTime * 1000];
+    if (self.testItem.result >= 0) {
+        self.resultLabel.text = [NSString stringWithFormat:@"%.0lfms", self.testItem.result * 1000];
     } else {
-        self.resultLabel.text = @"--";
+        if (self.testItem.result == TestRunFailed) {
+            self.resultLabel.text = @"Failed";
+        } else {
+            self.resultLabel.text = @"--";
+        }
     }
 }
 

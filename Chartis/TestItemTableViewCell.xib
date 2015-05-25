@@ -26,9 +26,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-sJ-VYO" customClass="MKButton" customModule="MaterialKit">
-                        <rect key="frame" x="262" y="14" width="50" height="31"/>
+                        <rect key="frame" x="272" y="14" width="40" height="31"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="jvq-51-5kx"/>
+                            <constraint firstAttribute="width" constant="40" id="jvq-51-5kx"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                         <state key="normal" title="Test">

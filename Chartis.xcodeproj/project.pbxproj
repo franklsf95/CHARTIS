@@ -21,6 +21,7 @@
 		2E89A4AB1B0E6E19002A11B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E89A4AA1B0E6E19002A11B3 /* Images.xcassets */; };
 		2E89A4AE1B0E6E19002A11B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E89A4AC1B0E6E19002A11B3 /* LaunchScreen.xib */; };
 		2E89A4BA1B0E6E19002A11B3 /* ChartisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A4B91B0E6E19002A11B3 /* ChartisTests.m */; };
+		2E9877651B12B6A400AE8BD0 /* JSONSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9877641B12B6A400AE8BD0 /* JSONSupport.swift */; };
 		68830EEAED3EEBE9671846B7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4145847E81EFBD599BF2DA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		2E89A4B31B0E6E19002A11B3 /* ChartisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChartisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E89A4B81B0E6E19002A11B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E89A4B91B0E6E19002A11B3 /* ChartisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartisTests.m; sourceTree = "<group>"; };
+		2E9877641B12B6A400AE8BD0 /* JSONSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSupport.swift; sourceTree = "<group>"; };
 		8E03FD1C7873C3CE0EF937CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EC4145847E81EFBD599BF2DA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC7004245D22A2B77F3CA4EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,8 +114,8 @@
 			children = (
 				2E4A80C31B1292AD00BC8378 /* CHHTTPRequestSerializer.swift */,
 				2E4A80C01B1285FC00BC8378 /* Models.h */,
-				2E4A80C11B128F1900BC8378 /* TestManager.swift */,
 				2E493B9D1B0F062000DD806B /* TestItem.swift */,
+				2E4A80C11B128F1900BC8378 /* TestManager.swift */,
 			);
 			name = TestEngine;
 			sourceTree = "<group>";
@@ -154,6 +156,7 @@
 		2E89A49D1B0E6E19002A11B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2E9877641B12B6A400AE8BD0 /* JSONSupport.swift */,
 				2E493B911B0E957C00DD806B /* Chartis-Bridging-Header.h */,
 				2E493B891B0E8E5E00DD806B /* PrefixHeader.pch */,
 				2E493B8C1B0E8E5E00DD806B /* Styling.h */,
@@ -353,6 +356,7 @@
 			files = (
 				2E4A80C21B128F1900BC8378 /* TestManager.swift in Sources */,
 				2E493B9E1B0F062000DD806B /* TestItem.swift in Sources */,
+				2E9877651B12B6A400AE8BD0 /* JSONSupport.swift in Sources */,
 				2E89A4A61B0E6E19002A11B3 /* RootViewController.m in Sources */,
 				2E89A4A31B0E6E19002A11B3 /* AppDelegate.m in Sources */,
 				2E493B981B0F04CD00DD806B /* TestItemTableViewCell.m in Sources */,
