@@ -15,23 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2E89A4991B0E6E19002A11B3"
-               BuildableName = "Chartis.app"
-               BlueprintName = "Chartis"
-               ReferencedContainer = "container:Chartis.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2E89A4B21B0E6E19002A11B3"
-               BuildableName = "ChartisTests.xctest"
-               BlueprintName = "ChartisTests"
-               ReferencedContainer = "container:Chartis.xcodeproj">
+               BuildableName = "CHARTIS.app"
+               BlueprintName = "CHARTIS"
+               ReferencedContainer = "container:CHARTIS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2E89A4B21B0E6E19002A11B3"
-               BuildableName = "ChartisTests.xctest"
-               BlueprintName = "ChartisTests"
-               ReferencedContainer = "container:Chartis.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2E89A4991B0E6E19002A11B3"
-            BuildableName = "Chartis.app"
-            BlueprintName = "Chartis"
-            ReferencedContainer = "container:Chartis.xcodeproj">
+            BuildableName = "CHARTIS.app"
+            BlueprintName = "CHARTIS"
+            ReferencedContainer = "container:CHARTIS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2E89A4991B0E6E19002A11B3"
-            BuildableName = "Chartis.app"
-            BlueprintName = "Chartis"
-            ReferencedContainer = "container:Chartis.xcodeproj">
+            BuildableName = "CHARTIS.app"
+            BlueprintName = "CHARTIS"
+            ReferencedContainer = "container:CHARTIS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2E89A4991B0E6E19002A11B3"
-            BuildableName = "Chartis.app"
-            BlueprintName = "Chartis"
-            ReferencedContainer = "container:Chartis.xcodeproj">
+            BuildableName = "CHARTIS.app"
+            BlueprintName = "CHARTIS"
+            ReferencedContainer = "container:CHARTIS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

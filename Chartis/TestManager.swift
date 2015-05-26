@@ -23,11 +23,18 @@ class TestManager: AFHTTPSessionManager {
     // Testing items
     
     var testItems = [
-        TestItem(key: "feed_10", displayName: "News Feed Loading", endpoint: "me/news_feed"),
-        TestItem(key: "sketch_1", displayName: "Sketch Detail Loading", endpoint: "sketches/2642"),
+        TestItem(key: "feed", displayName: "News Feed Loading", endpoint: "me/news_feed"),
+        TestItem(key: "feed_availability", displayName: "News Feed Availability Check", endpoint: "me/news_feed/available", parameters: ["bottom": "2015-05-25T16:58:45.000-0700"]),
+        TestItem(key: "notifications", displayName: "Notifications Loading", endpoint: "notifications"),
+        TestItem(key: "notifications_count", displayName: "Unread Count Fetching", endpoint: "me/notifications_count"),
+        TestItem(key: "sketch", displayName: "Sketch Detail Loading", endpoint: "sketches/2642"),
         TestItem(key: "friends", displayName: "Friends List Loading", endpoint: "friends/all"),
+        TestItem(key: "friends_recent", displayName: "Recent Friends Loading", endpoint: "friends/recent"),
+        TestItem(key: "user", displayName: "User Profile Loading (Small)", endpoint: "users/30"),
+        TestItem(key: "user", displayName: "User Profile Loading (Large)", endpoint: "users/76081"),
         TestItem(key: "sketch_o@aws_s3_us-west-2", displayName: "Sketch Original Image (AWS S3 us-west-2)", URL: "http://s3-us-west-2.amazonaws.com/delta-epsilon/sketches/1XCKRpedTaqv47_94tyr7Q_o.jpg"),
-        TestItem(key: "sketch_v@aws_s3_us-west-2", displayName: "Sketch Original Image (AWS S3 us-west-2)", URL: "http://s3-us-west-2.amazonaws.com/delta-epsilon/sketches/kEtwHZnRRYeNghLfNn55xw_v.png")
+        TestItem(key: "sketch_v@aws_s3_us-west-2", displayName: "Sketch Overlay Image (AWS S3 us-west-2)", URL: "http://s3-us-west-2.amazonaws.com/delta-epsilon/sketches/kEtwHZnRRYeNghLfNn55xw_v.png"),
+        TestItem(key: "avatar_t@aws_s3_us-west-2", displayName: "Thumbnail Image (AWS S3 us-west-2)", URL: "http://s3-us-west-2.amazonaws.com/delta-epsilon/sketches/OSsPotgkSuadLLMB2gXPOw_t.jpg")
     ]
     
     var executing = false
@@ -161,14 +168,13 @@ class TestManager: AFHTTPSessionManager {
     }
     
     func CSVString() -> String {
-        var csv = "key,result (ms),displayName,method,URL,parameters,results\n"
+        var csv = "key,result (ms),displayName,method,URL,results\n"
         for item in self.testItems {
             csv += "\"\(item.key)\","
             csv += String(format: "\"%.0lf\",", item.result * 1000)
             csv += "\"\(item.displayName)\","
             csv += "\"\(item.method)\","
             csv += "\"\(item.URLString)\","
-            csv += "\"\(item.parameters)\","
             csv += "\"\(item.results)\"\n"
         }
         return csv

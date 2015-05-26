@@ -65,7 +65,7 @@ static NSString * const CellTestItem = @"CellTestItem";
     [self.sendButton setAttributedTitle:aStr forState:UIControlStateNormal];
     NSString *shortVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     NSString *buildDate = [NSString stringWithUTF8String:__DATE__];
-    self.versionLabel.text = [NSString stringWithFormat:@"Version %@-alpha \uF8FF %@", shortVersion, buildDate];
+    self.versionLabel.text = [NSString stringWithFormat:@"Version %@ \u03B1    %@", shortVersion, buildDate];
     
     // Tune in notifications
     

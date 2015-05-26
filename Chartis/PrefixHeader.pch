@@ -13,7 +13,7 @@
 #import "CocoaLumberjack.h"
 
 #import "MaterialKit-Swift.h"
-#import "Chartis-Swift.h"
+#import "CHARTIS-Swift.h"
 #import <AFNetworking/AFNetworking.h>
 
 #import "Styling.h"

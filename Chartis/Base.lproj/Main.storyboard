@@ -43,7 +43,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF9-sP-Js2" customClass="MKButton" customModule="MaterialKit">
-                                        <rect key="frame" x="78" y="124" width="220" height="36"/>
+                                        <rect key="frame" x="78" y="114" width="220" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="CqS-hN-jUU"/>
                                             <constraint firstAttribute="height" constant="36" id="fA3-le-yU5"/>
@@ -65,18 +65,18 @@
                                         </connections>
                                     </button>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Euz-J5-WcV">
-                                        <rect key="frame" x="238" y="132" width="20" height="20"/>
+                                        <rect key="frame" x="258" y="122" width="20" height="20"/>
                                     </activityIndicatorView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6pp-iZ-Cg6">
-                                        <rect key="frame" x="0.0" y="180" width="375" height="407"/>
+                                        <rect key="frame" x="0.0" y="170" width="375" height="397"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9C-tB-Hmb" userLabel="Footer View">
-                                        <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSP-9b-cLs" customClass="MKButton" customModule="MaterialKit">
-                                                <rect key="frame" x="77" y="12" width="220" height="36"/>
+                                                <rect key="frame" x="77" y="22" width="220" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="220" id="NFD-lc-Uav"/>
                                                     <constraint firstAttribute="height" constant="36" id="PF8-Pt-xp1"/>
@@ -96,7 +96,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 0.1-alpha May 25 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvL-Y3-4Pg" customClass="MKLabel" customModule="MaterialKit">
-                                                <rect key="frame" x="111" y="57" width="153" height="15"/>
+                                                <rect key="frame" x="111" y="75" width="153" height="15"/>
                                                 <fontDescription key="fontDescription" name="FuturaLT-Light" family="Futura LT Light" pointSize="11"/>
                                                 <color key="textColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="deviceRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -107,8 +107,8 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="centerX" secondItem="hSP-9b-cLs" secondAttribute="centerX" id="Kv6-iE-pVR"/>
-                                            <constraint firstAttribute="bottom" secondItem="FvL-Y3-4Pg" secondAttribute="bottom" constant="8" id="bRC-QB-xMz"/>
-                                            <constraint firstAttribute="height" constant="80" id="edo-0s-e0Y"/>
+                                            <constraint firstAttribute="bottom" secondItem="FvL-Y3-4Pg" secondAttribute="bottom" constant="10" id="bRC-QB-xMz"/>
+                                            <constraint firstAttribute="height" constant="100" id="edo-0s-e0Y"/>
                                             <constraint firstAttribute="centerX" secondItem="FvL-Y3-4Pg" secondAttribute="centerX" id="r3b-pe-xtY"/>
                                             <constraint firstAttribute="centerY" secondItem="hSP-9b-cLs" secondAttribute="centerY" constant="10" id="uve-hX-kn4"/>
                                         </constraints>
@@ -123,9 +123,9 @@
                                     <constraint firstAttribute="centerX" secondItem="iPI-a1-Gmb" secondAttribute="centerX" id="Rab-ft-XH1"/>
                                     <constraint firstAttribute="centerX" secondItem="4sC-ID-Jo1" secondAttribute="centerX" id="S53-KG-Amr"/>
                                     <constraint firstAttribute="centerX" secondItem="6pp-iZ-Cg6" secondAttribute="centerX" id="Wjl-vf-BOj"/>
-                                    <constraint firstItem="Euz-J5-WcV" firstAttribute="trailing" secondItem="yF9-sP-Js2" secondAttribute="trailing" constant="-40" id="WqJ-Af-DOa"/>
+                                    <constraint firstItem="Euz-J5-WcV" firstAttribute="trailing" secondItem="yF9-sP-Js2" secondAttribute="trailing" constant="-20" id="WqJ-Af-DOa"/>
                                     <constraint firstItem="6pp-iZ-Cg6" firstAttribute="top" secondItem="yF9-sP-Js2" secondAttribute="bottom" constant="20" id="aQb-T7-IHy"/>
-                                    <constraint firstItem="yF9-sP-Js2" firstAttribute="top" secondItem="iPI-a1-Gmb" secondAttribute="bottom" constant="30" id="bnn-Af-qzW"/>
+                                    <constraint firstItem="yF9-sP-Js2" firstAttribute="top" secondItem="iPI-a1-Gmb" secondAttribute="bottom" constant="20" id="bnn-Af-qzW"/>
                                     <constraint firstAttribute="centerX" secondItem="yF9-sP-Js2" secondAttribute="centerX" id="eYd-UZ-PAr"/>
                                     <constraint firstItem="Euz-J5-WcV" firstAttribute="centerY" secondItem="yF9-sP-Js2" secondAttribute="centerY" id="jSY-Is-1JD"/>
                                     <constraint firstItem="e9C-tB-Hmb" firstAttribute="top" secondItem="6pp-iZ-Cg6" secondAttribute="bottom" id="lHc-i2-ZOq"/>

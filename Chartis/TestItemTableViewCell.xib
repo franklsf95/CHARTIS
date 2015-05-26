@@ -42,9 +42,9 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="30" translatesAutoresizingMaskIntoConstraints="NO" id="ii0-Yo-v8v" userLabel="Result Label">
-                        <rect key="frame" x="222" y="19" width="40" height="21"/>
+                        <rect key="frame" x="218" y="19" width="44" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="hJs-3i-YjO"/>
+                            <constraint firstAttribute="width" constant="44" id="hJs-3i-YjO"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="17"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>

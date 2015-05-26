@@ -52,7 +52,7 @@
 		2E4A80C31B1292AD00BC8378 /* CHHTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHHTTPRequestSerializer.swift; sourceTree = "<group>"; };
 		2E7F96D31B140918007AEFFD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2E7F96D61B14104D007AEFFD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		2E89A49A1B0E6E19002A11B3 /* Chartis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chartis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E89A49A1B0E6E19002A11B3 /* CHARTIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHARTIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E89A49E1B0E6E19002A11B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E89A49F1B0E6E19002A11B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E89A4A11B0E6E19002A11B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		2E89A4A81B0E6E19002A11B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E89A4AA1B0E6E19002A11B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2E89A4AD1B0E6E19002A11B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2E89A4B31B0E6E19002A11B3 /* ChartisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChartisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E89A4B31B0E6E19002A11B3 /* CHARTISTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHARTISTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E89A4B81B0E6E19002A11B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E89A4B91B0E6E19002A11B3 /* ChartisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartisTests.m; sourceTree = "<group>"; };
 		2E9877641B12B6A400AE8BD0 /* JSONSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSupport.swift; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 		2E89A49B1B0E6E19002A11B3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2E89A49A1B0E6E19002A11B3 /* Chartis.app */,
-				2E89A4B31B0E6E19002A11B3 /* ChartisTests.xctest */,
+				2E89A49A1B0E6E19002A11B3 /* CHARTIS.app */,
+				2E89A4B31B0E6E19002A11B3 /* CHARTISTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,9 +212,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2E89A4991B0E6E19002A11B3 /* Chartis */ = {
+		2E89A4991B0E6E19002A11B3 /* CHARTIS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E89A4BD1B0E6E19002A11B3 /* Build configuration list for PBXNativeTarget "Chartis" */;
+			buildConfigurationList = 2E89A4BD1B0E6E19002A11B3 /* Build configuration list for PBXNativeTarget "CHARTIS" */;
 			buildPhases = (
 				FF1B6E312D1EF5A9B229F015 /* Check Pods Manifest.lock */,
 				2E89A4961B0E6E19002A11B3 /* Sources */,
@@ -227,14 +227,14 @@
 			);
 			dependencies = (
 			);
-			name = Chartis;
+			name = CHARTIS;
 			productName = Chartis;
-			productReference = 2E89A49A1B0E6E19002A11B3 /* Chartis.app */;
+			productReference = 2E89A49A1B0E6E19002A11B3 /* CHARTIS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2E89A4B21B0E6E19002A11B3 /* ChartisTests */ = {
+		2E89A4B21B0E6E19002A11B3 /* CHARTISTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E89A4C01B0E6E19002A11B3 /* Build configuration list for PBXNativeTarget "ChartisTests" */;
+			buildConfigurationList = 2E89A4C01B0E6E19002A11B3 /* Build configuration list for PBXNativeTarget "CHARTISTests" */;
 			buildPhases = (
 				2E89A4AF1B0E6E19002A11B3 /* Sources */,
 				2E89A4B01B0E6E19002A11B3 /* Frameworks */,
@@ -245,9 +245,9 @@
 			dependencies = (
 				2E89A4B51B0E6E19002A11B3 /* PBXTargetDependency */,
 			);
-			name = ChartisTests;
+			name = CHARTISTests;
 			productName = ChartisTests;
-			productReference = 2E89A4B31B0E6E19002A11B3 /* ChartisTests.xctest */;
+			productReference = 2E89A4B31B0E6E19002A11B3 /* CHARTISTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -268,7 +268,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2E89A4951B0E6E19002A11B3 /* Build configuration list for PBXProject "Chartis" */;
+			buildConfigurationList = 2E89A4951B0E6E19002A11B3 /* Build configuration list for PBXProject "CHARTIS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -281,8 +281,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2E89A4991B0E6E19002A11B3 /* Chartis */,
-				2E89A4B21B0E6E19002A11B3 /* ChartisTests */,
+				2E89A4991B0E6E19002A11B3 /* CHARTIS */,
+				2E89A4B21B0E6E19002A11B3 /* CHARTISTests */,
 			);
 		};
 /* End PBXProject section */
@@ -387,7 +387,7 @@
 /* Begin PBXTargetDependency section */
 		2E89A4B51B0E6E19002A11B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2E89A4991B0E6E19002A11B3 /* Chartis */;
+			target = 2E89A4991B0E6E19002A11B3 /* CHARTIS */;
 			targetProxy = 2E89A4B41B0E6E19002A11B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -504,7 +504,7 @@
 				GCC_PREFIX_HEADER = Chartis/PrefixHeader.pch;
 				INFOPLIST_FILE = Chartis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CHARTIS;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chartis/Chartis-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -521,7 +521,7 @@
 				GCC_PREFIX_HEADER = Chartis/PrefixHeader.pch;
 				INFOPLIST_FILE = Chartis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CHARTIS;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chartis/Chartis-Bridging-Header.h";
 			};
@@ -541,7 +541,7 @@
 				);
 				INFOPLIST_FILE = ChartisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CHARTISTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chartis.app/Chartis";
 			};
 			name = Debug;
@@ -556,7 +556,7 @@
 				);
 				INFOPLIST_FILE = ChartisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CHARTISTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chartis.app/Chartis";
 			};
 			name = Release;
@@ -564,7 +564,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E89A4951B0E6E19002A11B3 /* Build configuration list for PBXProject "Chartis" */ = {
+		2E89A4951B0E6E19002A11B3 /* Build configuration list for PBXProject "CHARTIS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E89A4BB1B0E6E19002A11B3 /* Debug */,
@@ -573,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E89A4BD1B0E6E19002A11B3 /* Build configuration list for PBXNativeTarget "Chartis" */ = {
+		2E89A4BD1B0E6E19002A11B3 /* Build configuration list for PBXNativeTarget "CHARTIS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E89A4BE1B0E6E19002A11B3 /* Debug */,
@@ -582,7 +582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E89A4C01B0E6E19002A11B3 /* Build configuration list for PBXNativeTarget "ChartisTests" */ = {
+		2E89A4C01B0E6E19002A11B3 /* Build configuration list for PBXNativeTarget "CHARTISTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E89A4C11B0E6E19002A11B3 /* Debug */,

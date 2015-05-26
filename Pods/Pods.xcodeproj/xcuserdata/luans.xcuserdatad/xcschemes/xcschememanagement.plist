@@ -8,61 +8,73 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>Pods-APAddressBook.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Pods-CocoaLumberjack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Pods-INTULocationManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Pods-MaterialKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>602D449BA672E7671C5B16FA</key>
+		<key>2831140832382FB7E54F9400</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C0F4DFA07ADA29F78E49B0C</key>
+		<key>35917F5BAF483FCD579597D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9FA2844A74695E79ADDF67CA</key>
+		<key>936CB230FEEA5447ED3CF52F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE4BCA178C611EFD25816FEE</key>
+		<key>A04987FF9CD8DC7261D8CD4F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EA928D1DE09C2159CD3FD7E8</key>
+		<key>A7BBDF43AA5CE090FB32C196</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F8949EE96DA19337FE383637</key>
+		<key>E8795EEC1F3964013EA60A54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
