@@ -125,6 +125,7 @@ static NSString * const CellTestItem = @"CellTestItem";
         TestItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTestItem forIndexPath:indexPath];
         cell.delegate = self;
         cell.testItem = self.testItems[indexPath.row];
+        cell.backgroundColor = [UIColor clearColor];
         return cell;
     }
     return nil;
