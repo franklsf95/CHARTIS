@@ -32,30 +32,7 @@ PODS:
   - CocoaLumberjack/Extensions (2.0.0):
     - CocoaLumberjack/Default
   - INTULocationManager (3.0.1)
-  - JGProgressHUD (1.2.7)
   - MaterialKit (0.3.5)
-  - OMGHTTPURLRQ (2.1):
-    - OMGHTTPURLRQ/RQ (= 2.1)
-  - OMGHTTPURLRQ/FormURLEncode (2.1)
-  - OMGHTTPURLRQ/RQ (2.1):
-    - OMGHTTPURLRQ/FormURLEncode
-    - OMGHTTPURLRQ/UserAgent
-  - OMGHTTPURLRQ/UserAgent (2.1)
-  - PromiseKit (2.0.1):
-    - PromiseKit/Foundation (= 2.0.1)
-    - PromiseKit/QuartzCore (= 2.0.1)
-    - PromiseKit/UIKit (= 2.0.1)
-  - PromiseKit/CorePromise (2.0.1)
-  - PromiseKit/Foundation (2.0.1):
-    - OMGHTTPURLRQ
-    - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (2.0.1):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (2.0.1):
-    - PromiseKit/CorePromise
-  - SDWebImage (3.7.2):
-    - SDWebImage/Core (= 3.7.2)
-  - SDWebImage/Core (3.7.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -63,10 +40,7 @@ DEPENDENCIES:
   - CocoaLumberjack (from `https://github.com/CocoaLumberjack/CocoaLumberjack`, branch
     `swift_support`)
   - INTULocationManager
-  - JGProgressHUD
   - MaterialKit
-  - PromiseKit
-  - SDWebImage
 
 EXTERNAL SOURCES:
   CocoaLumberjack:
@@ -83,10 +57,6 @@ SPEC CHECKSUMS:
   APAddressBook: 6d9142c95f8306fdc229b62171251283777e750c
   CocoaLumberjack: 881d9b60cb7d1f647305863086a23bcd835d961a
   INTULocationManager: c27483113e1bbc5952ead6417f9b39824a240ebb
-  JGProgressHUD: a45c1d16adddf7e38092ce3f0d71d3955d2de2ec
   MaterialKit: 6f1e9382f89593df768bc0c31ded9952a6d8ad46
-  OMGHTTPURLRQ: f8c515dfd2f57a5d74c710978f600231f52afec5
-  PromiseKit: 99e70653af4599292678d92dc3bcf82b2872a578
-  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
 COCOAPODS: 0.37.1

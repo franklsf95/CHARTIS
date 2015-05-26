@@ -44,6 +44,8 @@ class TestManager: AFHTTPSessionManager {
     
     // MARK: - API Methods
     
+    var allTestsCompleted = false
+    
     func runAllTests(completion: (Void -> Void)?) {
         runAllTests(0, completion: completion)
     }
@@ -54,6 +56,8 @@ class TestManager: AFHTTPSessionManager {
             if currentIndex < count(self.testItems) - 1 {
                 self.runAllTests(currentIndex + 1, completion: completion)
             } else {
+                // Completion
+                self.allTestsCompleted = true
                 completion?()
             }
         }
@@ -93,7 +97,7 @@ class TestManager: AFHTTPSessionManager {
             return
         }
         self.executing = true
-        DDLogDebug("\t\tStarting \(item)")
+        DDLogDebug("\t\tRunning \(item)")
         switch (item.responseType) {
         case .JSON:
             self.responseSerializer = AFJSONResponseSerializer()
@@ -110,7 +114,6 @@ class TestManager: AFHTTPSessionManager {
                 item.results.append(duration)
             }
             self.executing = false
-            DDLogDebug("\t\tCompleting \(item)")
             completion?(item.result)
         }, failure: { (dataTask, error) in
             DDLogError("\t\tError \(error)")
@@ -137,7 +140,17 @@ class TestManager: AFHTTPSessionManager {
     }
     
     func CSVString() -> String {
-        return "AA"
+        var csv = "key,result (ms),displayName,method,URL,parameters,results\n"
+        for item in self.testItems {
+            csv += "\"\(item.key)\","
+            csv += String(format: "\"%.0lf\",", item.result * 1000)
+            csv += "\"\(item.displayName)\","
+            csv += "\"\(item.method)\","
+            csv += "\"\(item.URLString)\","
+            csv += "\"\(item.parameters)\","
+            csv += "\"\(item.results)\"\n"
+        }
+        return csv
     }
     
 }

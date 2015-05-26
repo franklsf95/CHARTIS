@@ -16,7 +16,7 @@ enum {
 
 static NSString * const CellTestItem = @"CellTestItem";
 
-@interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
+@interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) CAGradientLayer *gradientLayer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewBottomConstraint;
@@ -28,6 +28,7 @@ static NSString * const CellTestItem = @"CellTestItem";
 @property (weak, nonatomic) IBOutlet MKButton *startButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *testingIndicator;
 @property (weak, nonatomic) IBOutlet MKButton *sendButton;
+@property (weak, nonatomic) IBOutlet MKLabel *versionLabel;
 
 @property (nonatomic, copy) NSArray *testItems;
 
@@ -55,6 +56,9 @@ static NSString * const CellTestItem = @"CellTestItem";
     
     NSAttributedString *aStr = [[NSAttributedString alloc] initWithString:@"SEND REPORT" attributes:@{NSKernAttributeName: @1, NSForegroundColorAttributeName: [UIColor whiteColor]}];
     [self.sendButton setAttributedTitle:aStr forState:UIControlStateNormal];
+    NSString *shortVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    NSString *buildDate = [NSString stringWithUTF8String:__DATE__];
+    self.versionLabel.text = [NSString stringWithFormat:@"Version %@-alpha \uF8FF %@", shortVersion, buildDate];
     
     // Tune in notifications
     
@@ -150,30 +154,59 @@ static NSString * const CellTestItem = @"CellTestItem";
     [self.testingIndicator startAnimating];
     [[TestManager sharedInstance] runAllTests:^{
         [self.testingIndicator stopAnimating];
+        [UIView animateWithDuration:DefaultAnimationDuration animations:^{
+            self.sendButton.backgroundColor = [UIColor chartisOrange];
+            self.sendButton.backgroundLayerColor = [UIColor chartisOrange];
+        }];
     }];
 }
 
 #pragma mark - Email submission
 
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 - (IBAction)sendButtonTouched:(UIButton *)sender {
+    if (![[TestManager sharedInstance] allTestsCompleted]) {
+        [self alertTestsNotCompleted];
+        return;
+    }
     MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+    mail.mailComposeDelegate = self;
     [mail setSubject:[self emailTitle]];
-    [mail setMessageBody:@"Hi!" isHTML:NO];
+    [mail setMessageBody:[self emailMessage] isHTML:NO];
     [mail setToRecipients:@[@"frank@sketchme.co"]];
     [mail addAttachmentData:[[TestManager sharedInstance] CSVData] mimeType:@"text/csv" fileName:[self attachmentFileName]];
     [self presentViewController:mail animated:YES completion:NULL];
 }
 
+- (void)alertTestsNotCompleted {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oops!" message:@"No test results available. Please run all tests first!" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:NULL]];
+    [self presentViewController:alert animated:YES completion:NULL];
+}
+
 - (NSString *)currentDate {
-    return @"Now";
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    return [formatter stringFromDate:[NSDate date]];
+}
+
+- (NSString *)currentLocation {
+    return @"Earth";
 }
 
 - (NSString *)emailTitle {
-    return @"SketchMe Benchmarking Result";
+    return [NSString stringWithFormat:@"SketchMe Benchmarking Result %@ %@", [self currentDate], [self currentLocation]];
+}
+
+- (NSString *)emailMessage {
+    return @"C.H.A.R.T.I.S. Log\n====================\n";
 }
 
 - (NSString *)attachmentFileName {
-    return @"A.csv";
+    return [NSString stringWithFormat:@"%@ %@.csv", [self currentDate], [self currentLocation]];
 }
 
 @end

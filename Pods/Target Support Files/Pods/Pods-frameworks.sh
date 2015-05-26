@@ -52,20 +52,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'APAddressBook.framework'
   install_framework 'CocoaLumberjack.framework'
   install_framework 'INTULocationManager.framework'
-  install_framework 'JGProgressHUD.framework'
   install_framework 'MaterialKit.framework'
-  install_framework 'OMGHTTPURLRQ.framework'
-  install_framework 'PromiseKit.framework'
-  install_framework 'SDWebImage.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'AFNetworking.framework'
   install_framework 'APAddressBook.framework'
   install_framework 'CocoaLumberjack.framework'
   install_framework 'INTULocationManager.framework'
-  install_framework 'JGProgressHUD.framework'
   install_framework 'MaterialKit.framework'
-  install_framework 'OMGHTTPURLRQ.framework'
-  install_framework 'PromiseKit.framework'
-  install_framework 'SDWebImage.framework'
 fi
