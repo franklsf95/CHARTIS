@@ -3,6 +3,7 @@
 //
 
 #import <AFNetworking/AFNetworking.h>
+#import <INTULocationManager/INTULocationManager.h>
 #import "Models.h"
 
 @interface AFHTTPSessionManager (Additions)

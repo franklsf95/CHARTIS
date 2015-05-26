@@ -70,6 +70,11 @@
     return UIColorFromHex(0xFF3824);
 }
 
++ (UIColor *)chartisBlue
+{
+    return UIColorFromHex(0x0076FF);
+}
+
 + (UIColor *)themeRandom
 {
     static NSUInteger previousIndex = -1;

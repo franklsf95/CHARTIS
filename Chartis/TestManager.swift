@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreLocation
 import AFNetworking
 import CocoaLumberjack
+import INTULocationManager
 
 class TestManager: AFHTTPSessionManager {
     
@@ -130,6 +132,25 @@ class TestManager: AFHTTPSessionManager {
         let req = request.mutableCopy() as! NSMutableURLRequest
         req.setValue(sessionToken, forHTTPHeaderField: "X-Session-Token")
         return super.dataTaskWithRequest(req, completionHandler: completionHandler)
+    }
+    
+    // MARK: - Location
+    
+    func requestForCurrentLocation(completion: (String -> Void)?) {
+        INTULocationManager.sharedInstance().requestLocationWithDesiredAccuracy(.City, timeout: 5.0, delayUntilAuthorized: true) { (location, accuracy, status) in
+            if status == .Success || status == .TimedOut {
+                CLGeocoder().reverseGeocodeLocation(location) { (placemarks, error) in
+                    if let placemark = placemarks.first as? CLPlacemark {
+                        let country = placemark.country
+                        let state = placemark.administrativeArea
+                        let city = placemark.locality
+                        let address = "\(city), \(state), \(country)"
+                        DDLogInfo("Current Location: \(address)")
+                        completion?(address)
+                    }
+                }
+            }
+        }
     }
     
     // MARK: - CSV Output

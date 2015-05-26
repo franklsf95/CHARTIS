@@ -9,6 +9,9 @@
 #import "RootViewController.h"
 #import "TestItemTableViewCell.h"
 #import <MessageUI/MessageUI.h>
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
+#import "AppDelegate.h"
 
 enum {
     SectionAPITesting = 0
@@ -18,6 +21,7 @@ static NSString * const CellTestItem = @"CellTestItem";
 
 @interface RootViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 
+@property (nonatomic, copy) NSString *currentLocationString;
 @property (nonatomic, strong) CAGradientLayer *gradientLayer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentViewBottomConstraint;
 
@@ -49,12 +53,15 @@ static NSString * const CellTestItem = @"CellTestItem";
     
     // Setup UI - header
     
+    NSAttributedString *aStr;
+    aStr = [[NSAttributedString alloc] initWithString:@"TEST ALL" attributes:@{NSKernAttributeName: @1, NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    [self.startButton setAttributedTitle:aStr forState:UIControlStateNormal];
     self.startButton.backgroundColor = [UIColor chartisOrange];
     self.startButton.backgroundLayerColor = [UIColor chartisOrange];
     
     // Setup UI - footer
     
-    NSAttributedString *aStr = [[NSAttributedString alloc] initWithString:@"SEND REPORT" attributes:@{NSKernAttributeName: @1, NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    aStr = [[NSAttributedString alloc] initWithString:@"SEND REPORT" attributes:@{NSKernAttributeName: @1, NSForegroundColorAttributeName: [UIColor whiteColor]}];
     [self.sendButton setAttributedTitle:aStr forState:UIControlStateNormal];
     NSString *shortVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     NSString *buildDate = [NSString stringWithUTF8String:__DATE__];
@@ -76,6 +83,9 @@ static NSString * const CellTestItem = @"CellTestItem";
     // Initialize test items
     
     self.testItems = [[TestManager sharedInstance] testItems];
+    [[TestManager sharedInstance] requestForCurrentLocation:^(NSString *locationString) {
+        self.currentLocationString = locationString;
+    }];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -155,8 +165,8 @@ static NSString * const CellTestItem = @"CellTestItem";
     [[TestManager sharedInstance] runAllTests:^{
         [self.testingIndicator stopAnimating];
         [UIView animateWithDuration:DefaultAnimationDuration animations:^{
-            self.sendButton.backgroundColor = [UIColor chartisOrange];
-            self.sendButton.backgroundLayerColor = [UIColor chartisOrange];
+            self.sendButton.backgroundColor = [UIColor chartisBlue];
+            self.sendButton.backgroundLayerColor = [UIColor chartisBlue];
         }];
     }];
 }
@@ -177,7 +187,8 @@ static NSString * const CellTestItem = @"CellTestItem";
     [mail setSubject:[self emailTitle]];
     [mail setMessageBody:[self emailMessage] isHTML:NO];
     [mail setToRecipients:@[@"frank@sketchme.co"]];
-    [mail addAttachmentData:[[TestManager sharedInstance] CSVData] mimeType:@"text/csv" fileName:[self attachmentFileName]];
+    [mail addAttachmentData:[[TestManager sharedInstance] CSVData] mimeType:@"text/csv" fileName:[NSString stringWithFormat:@"%@.csv", [self testResultTitle]]];
+    [mail addAttachmentData:[self applicationLogData] mimeType:@"text/plain" fileName:[NSString stringWithFormat:@"%@.log", [self testResultTitle]]];
     [self presentViewController:mail animated:YES completion:NULL];
 }
 
@@ -187,26 +198,35 @@ static NSString * const CellTestItem = @"CellTestItem";
     [self presentViewController:alert animated:YES completion:NULL];
 }
 
-- (NSString *)currentDate {
+#pragma mark - Test Result data source
+
+- (NSString *)currentDateString {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
     return [formatter stringFromDate:[NSDate date]];
 }
 
-- (NSString *)currentLocation {
-    return @"Earth";
+- (NSString *)currentCarrierString {
+    CTTelephonyNetworkInfo *netInfo = [[CTTelephonyNetworkInfo alloc] init];
+    CTCarrier *carrier = [netInfo subscriberCellularProvider];
+    return [carrier carrierName];
+}
+
+- (NSString *)testResultTitle {
+    return [NSString stringWithFormat:@"%@ %@ %@", [self currentDateString], [self currentCarrierString], [self currentLocationString]];
 }
 
 - (NSString *)emailTitle {
-    return [NSString stringWithFormat:@"SketchMe Benchmarking Result %@ %@", [self currentDate], [self currentLocation]];
+    return [NSString stringWithFormat:@"SketchMe Benchmarking Result %@", [self testResultTitle]];
 }
 
 - (NSString *)emailMessage {
-    return @"C.H.A.R.T.I.S. Log\n====================\n";
+    return @"Hi Frank! Attached is my test result.";
 }
 
-- (NSString *)attachmentFileName {
-    return [NSString stringWithFormat:@"%@ %@.csv", [self currentDate], [self currentLocation]];
+- (NSData *)applicationLogData {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    return [appDelegate applicationLogData];
 }
 
 @end

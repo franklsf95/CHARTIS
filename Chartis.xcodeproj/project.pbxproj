@@ -14,6 +14,8 @@
 		2E493B9E1B0F062000DD806B /* TestItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E493B9D1B0F062000DD806B /* TestItem.swift */; };
 		2E4A80C21B128F1900BC8378 /* TestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A80C11B128F1900BC8378 /* TestManager.swift */; };
 		2E4A80C41B1292AD00BC8378 /* CHHTTPRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A80C31B1292AD00BC8378 /* CHHTTPRequestSerializer.swift */; };
+		2E7F96D51B1409CF007AEFFD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7F96D31B140918007AEFFD /* CoreLocation.framework */; };
+		2E7F96D71B14104D007AEFFD /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E7F96D61B14104D007AEFFD /* CoreTelephony.framework */; };
 		2E89A4A01B0E6E19002A11B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A49F1B0E6E19002A11B3 /* main.m */; };
 		2E89A4A31B0E6E19002A11B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A4A21B0E6E19002A11B3 /* AppDelegate.m */; };
 		2E89A4A61B0E6E19002A11B3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A4A51B0E6E19002A11B3 /* RootViewController.m */; };
@@ -22,7 +24,7 @@
 		2E89A4AE1B0E6E19002A11B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E89A4AC1B0E6E19002A11B3 /* LaunchScreen.xib */; };
 		2E89A4BA1B0E6E19002A11B3 /* ChartisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E89A4B91B0E6E19002A11B3 /* ChartisTests.m */; };
 		2E9877651B12B6A400AE8BD0 /* JSONSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9877641B12B6A400AE8BD0 /* JSONSupport.swift */; };
-		68830EEAED3EEBE9671846B7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4145847E81EFBD599BF2DA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D23C0C6AB30A181BCEC16FA3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4145847E81EFBD599BF2DA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		2E4A80C01B1285FC00BC8378 /* Models.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Models.h; sourceTree = "<group>"; };
 		2E4A80C11B128F1900BC8378 /* TestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestManager.swift; sourceTree = "<group>"; };
 		2E4A80C31B1292AD00BC8378 /* CHHTTPRequestSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHHTTPRequestSerializer.swift; sourceTree = "<group>"; };
+		2E7F96D31B140918007AEFFD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2E7F96D61B14104D007AEFFD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		2E89A49A1B0E6E19002A11B3 /* Chartis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chartis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E89A49E1B0E6E19002A11B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E89A49F1B0E6E19002A11B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -72,7 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68830EEAED3EEBE9671846B7 /* Pods.framework in Frameworks */,
+				2E7F96D71B14104D007AEFFD /* CoreTelephony.framework in Frameworks */,
+				2E7F96D51B1409CF007AEFFD /* CoreLocation.framework in Frameworks */,
+				D23C0C6AB30A181BCEC16FA3 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +202,8 @@
 		FAD43C9EB98F2E1AAF3DCAF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E7F96D61B14104D007AEFFD /* CoreTelephony.framework */,
+				2E7F96D31B140918007AEFFD /* CoreLocation.framework */,
 				EC4145847E81EFBD599BF2DA /* Pods.framework */,
 			);
 			name = Frameworks;

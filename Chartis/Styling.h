@@ -74,6 +74,8 @@ static inline UIViewAnimationOptions animationOptionsWithCurve(UIViewAnimationCu
 + (UIColor *)themeOrange;
 /// 0xFF3824
 + (UIColor *)chartisOrange;
+/// 0x0076FF
++ (UIColor *)chartisBlue;
 + (UIColor *)themeRandom;
 + (NSArray *)spectrum;
 
