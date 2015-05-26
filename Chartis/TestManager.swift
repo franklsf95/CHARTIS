@@ -146,17 +146,21 @@ class TestManager: AFHTTPSessionManager {
     func requestForCurrentLocation(completion: (String -> Void)?) {
         INTULocationManager.sharedInstance().requestLocationWithDesiredAccuracy(.City, timeout: 5.0, delayUntilAuthorized: true) { (location, accuracy, status) in
             if status == .Success || status == .TimedOut {
-                CLGeocoder().reverseGeocodeLocation(location) { (placemarks, error) in
-                    if let placemark = placemarks.first as? CLPlacemark {
-                        let country = placemark.country
-                        let state = placemark.administrativeArea
-                        let city = placemark.locality
-                        let address = "\(city), \(state), \(country)"
-                        DDLogInfo("Current Location: \(address)")
-                        completion?(address)
+                if let location = location {
+                    CLGeocoder().reverseGeocodeLocation(location) { (placemarks, error) in
+                        if let placemark = placemarks.first as? CLPlacemark {
+                            let country = placemark.country
+                            let state = placemark.administrativeArea
+                            let city = placemark.locality
+                            let address = "\(city), \(state), \(country)"
+                            DDLogInfo("Current Location: \(address)")
+                            completion?(address)
+                        }
                     }
                 }
             }
+            DDLogInfo("Failed to fetch current location")
+            completion?("")
         }
     }
     
