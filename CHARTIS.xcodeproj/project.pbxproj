@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072D85E11B16DE370022B618 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D85E01B16DE370022B618 /* OpenGLES.framework */; };
+		072D85E31B16DE3C0022B618 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D85E21B16DE3C0022B618 /* SceneKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		072D85E51B16DE410022B618 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D85E41B16DE410022B618 /* CoreMotion.framework */; };
+		072D85E71B16DE4A0022B618 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D85E61B16DE4A0022B618 /* AudioToolbox.framework */; };
+		072D85E91B16DE530022B618 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D85E81B16DE530022B618 /* AVFoundation.framework */; };
+		072D85EB1B16DE5A0022B618 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D85EA1B16DE5A0022B618 /* SystemConfiguration.framework */; };
+		072D85ED1B16DEB50022B618 /* PgySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072D85EC1B16DEB50022B618 /* PgySDK.framework */; };
 		2E28DEB81B0F1639004CE151 /* Futura LT Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E28DEB71B0F1636004CE151 /* Futura LT Light.ttf */; };
 		2E493B8F1B0E8E5E00DD806B /* Styling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E493B8D1B0E8E5E00DD806B /* Styling.m */; };
 		2E493B981B0F04CD00DD806B /* TestItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E493B961B0F04CD00DD806B /* TestItemTableViewCell.m */; };
@@ -38,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072D85E01B16DE370022B618 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		072D85E21B16DE3C0022B618 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		072D85E41B16DE410022B618 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		072D85E61B16DE4A0022B618 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		072D85E81B16DE530022B618 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		072D85EA1B16DE5A0022B618 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		072D85EC1B16DEB50022B618 /* PgySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PgySDK.framework; sourceTree = "<group>"; };
 		2E28DEB71B0F1636004CE151 /* Futura LT Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura LT Light.ttf"; sourceTree = "<group>"; };
 		2E493B891B0E8E5E00DD806B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2E493B8C1B0E8E5E00DD806B /* Styling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Styling.h; sourceTree = "<group>"; };
@@ -76,6 +90,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072D85ED1B16DEB50022B618 /* PgySDK.framework in Frameworks */,
+				072D85EB1B16DE5A0022B618 /* SystemConfiguration.framework in Frameworks */,
+				072D85E91B16DE530022B618 /* AVFoundation.framework in Frameworks */,
+				072D85E71B16DE4A0022B618 /* AudioToolbox.framework in Frameworks */,
+				072D85E51B16DE410022B618 /* CoreMotion.framework in Frameworks */,
+				072D85E31B16DE3C0022B618 /* SceneKit.framework in Frameworks */,
+				072D85E11B16DE370022B618 /* OpenGLES.framework in Frameworks */,
 				2E7F96D71B14104D007AEFFD /* CoreTelephony.framework in Frameworks */,
 				2E7F96D51B1409CF007AEFFD /* CoreLocation.framework in Frameworks */,
 				D23C0C6AB30A181BCEC16FA3 /* Pods.framework in Frameworks */,
@@ -162,6 +183,7 @@
 		2E89A49D1B0E6E19002A11B3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				072D85EC1B16DEB50022B618 /* PgySDK.framework */,
 				2E9877641B12B6A400AE8BD0 /* JSONSupport.swift */,
 				2E493B911B0E957C00DD806B /* Chartis-Bridging-Header.h */,
 				2E493B891B0E8E5E00DD806B /* PrefixHeader.pch */,
@@ -202,6 +224,12 @@
 		FAD43C9EB98F2E1AAF3DCAF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				072D85EA1B16DE5A0022B618 /* SystemConfiguration.framework */,
+				072D85E81B16DE530022B618 /* AVFoundation.framework */,
+				072D85E61B16DE4A0022B618 /* AudioToolbox.framework */,
+				072D85E41B16DE410022B618 /* CoreMotion.framework */,
+				072D85E21B16DE3C0022B618 /* SceneKit.framework */,
+				072D85E01B16DE370022B618 /* OpenGLES.framework */,
 				2E7F96D61B14104D007AEFFD /* CoreTelephony.framework */,
 				2E7F96D31B140918007AEFFD /* CoreLocation.framework */,
 				EC4145847E81EFBD599BF2DA /* Pods.framework */,
@@ -515,6 +543,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chartis",
+				);
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREFIX_HEADER = Chartis/PrefixHeader.pch;
 				INFOPLIST_FILE = Chartis/Info.plist;
@@ -535,6 +567,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chartis",
+				);
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREFIX_HEADER = Chartis/PrefixHeader.pch;
 				INFOPLIST_FILE = Chartis/Info.plist;

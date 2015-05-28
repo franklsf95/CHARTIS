@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <PgySDK/PgyManager.h>
 
 @interface AppDelegate ()
 
@@ -27,7 +28,10 @@
     self.logFilePath = [[fileLogger currentLogFileInfo] filePath];
     
     DDLogInfo(@"====== C.H.A.R.T.I.S. starting up");
-    
+
+    [[PgyManager sharedPgyManager] startManagerWithAppId:@"0799efaeeefdf59499b831f0bc8421e0"];
+    [[PgyManager sharedPgyManager] checkUpdate];
+
     return YES;
 }
 
